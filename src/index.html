@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular Tour of Heroes</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+    <!-- Polyfills -->
+    <script src="vendor/JQuery/jquery-2.2.4.min.js"></script>
+    <script src="vendor/js/bootstrap.min.js"></script>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
+</html>
