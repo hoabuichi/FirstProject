@@ -1,0 +1,1 @@
+{"version":3,"file":"statisticCard.component.js","sourceRoot":"","sources":["statisticCard.component.ts"],"names":[],"mappings":";;;;;;;;AAAA;;GAEG;AACH,sCAAgD;AAQhD,IAAa,qBAAqB;IAAlC;IAEA,CAAC;IAAD,4BAAC;AAAD,CAAC,AAFD,IAEC;AAFY,qBAAqB;IANjC,gBAAS,CAAE;QACR,QAAQ,EAAE,gBAAgB;QAC1B,WAAW,EAAE,gCAAgC;QAC7C,SAAS,EAAE,CAAC,+BAA+B,CAAC;KAC/C,CAAC;GAEW,qBAAqB,CAEjC;AAFY,sDAAqB"}

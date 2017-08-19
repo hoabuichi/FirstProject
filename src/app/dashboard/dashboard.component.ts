@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { StatisticCardComponet } from './../commonComponent/statisticCard/statisticCard.component'
+import { StatisticCardComponet } from '../../common/statisticCard/statisticCard.component'
 
 @Component ({
     selector: 'dashboard',

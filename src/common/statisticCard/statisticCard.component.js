@@ -13,14 +13,14 @@ var core_1 = require("@angular/core");
 var StatisticCardComponet = (function () {
     function StatisticCardComponet() {
     }
-    StatisticCardComponet = __decorate([
-        core_1.Component({
-            selector: 'statistic-card',
-            templateUrl: './statisticCard.component.html',
-            styleUrls: ['./statisticCard.component.css']
-        })
-    ], StatisticCardComponet);
     return StatisticCardComponet;
 }());
+StatisticCardComponet = __decorate([
+    core_1.Component({
+        selector: 'statistic-card',
+        templateUrl: './statisticCard.component.html',
+        styleUrls: ['./statisticCard.component.css']
+    })
+], StatisticCardComponet);
 exports.StatisticCardComponet = StatisticCardComponet;
 //# sourceMappingURL=statisticCard.component.js.map

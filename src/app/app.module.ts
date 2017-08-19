@@ -4,7 +4,7 @@ import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent }  from './app.component';
 import { DashboardComponent }from './dashboard/dashboard.component'
-import { StatisticCardComponet } from './commonComponent/statisticCard/statisticCard.component'
+import { StatisticCardComponet } from './../common/statisticCard/statisticCard.component'
 
 @NgModule({
   imports: [

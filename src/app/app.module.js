@@ -11,25 +11,25 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms"); // <-- NgModel lives here
 var app_component_1 = require("./app.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
-var statisticCard_component_1 = require("./commonComponent/statisticCard/statisticCard.component");
+var statisticCard_component_1 = require("./../common/statisticCard/statisticCard.component");
 var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule // <-- import the FormsModule before binding with [(ngModel)]
-            ],
-            declarations: [
-                app_component_1.AppComponent,
-                dashboard_component_1.DashboardComponent,
-                statisticCard_component_1.StatisticCardComponet
-            ],
-            bootstrap: [app_component_1.AppComponent]
-        })
-    ], AppModule);
     return AppModule;
 }());
+AppModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            platform_browser_1.BrowserModule,
+            forms_1.FormsModule // <-- import the FormsModule before binding with [(ngModel)]
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            dashboard_component_1.DashboardComponent,
+            statisticCard_component_1.StatisticCardComponet
+        ],
+        bootstrap: [app_component_1.AppComponent]
+    })
+], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
