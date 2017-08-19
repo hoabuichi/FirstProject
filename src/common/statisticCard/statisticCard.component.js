@@ -18,8 +18,7 @@ var StatisticCardComponet = (function () {
 StatisticCardComponet = __decorate([
     core_1.Component({
         selector: 'statistic-card',
-        templateUrl: './statisticCard.component.html',
-        styleUrls: ['./statisticCard.component.css']
+        templateUrl: './statisticCard.component.html'
     })
 ], StatisticCardComponet);
 exports.StatisticCardComponet = StatisticCardComponet;

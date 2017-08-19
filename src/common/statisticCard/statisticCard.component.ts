@@ -5,8 +5,7 @@ import { Component, Input } from '@angular/core'
 
 @Component ({
     selector: 'statistic-card',
-    templateUrl: './statisticCard.component.html',
-    styleUrls: ['./statisticCard.component.css']
+    templateUrl: './statisticCard.component.html'
 })
 
 export class StatisticCardComponet {
