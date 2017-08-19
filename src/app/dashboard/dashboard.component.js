@@ -7,15 +7,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var Cards = [
+    {
+        icon: 'fa-users',
+        title: 'users',
+        numberCard: 267,
+        unitIcon: 'fa-signal',
+        bGColor: '#34495E',
+        moreInfoBG: '#2F4254'
+    },
+    {
+        icon: 'fa-money',
+        title: 'revenue',
+        numberCard: 32.384,
+        unitIcon: 'fa-dollar',
+        bGColor: '#16A085',
+        moreInfoBG: '#149077'
+    }
+];
 var DashboardComponent = (function () {
     function DashboardComponent() {
+        this.cards = Cards;
     }
     return DashboardComponent;
 }());
 DashboardComponent = __decorate([
     core_1.Component({
         selector: 'dashboard',
-        template: "\n    <div>\n        <statistic-card></statistic-card>\n    </div>"
+        template: "\n    <div *ngFor=\"let card of cards\" class=\"card-detail\">\n        <statistic-card [card]=\"card\"></statistic-card>\n    </div>"
     })
 ], DashboardComponent);
 exports.DashboardComponent = DashboardComponent;

@@ -8,7 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   <dashboard></dashboard>`
 })
 export class AppComponent implements OnInit {
-  title = 'Tour of Heroes';
+  title = 'Dashboard';
 
   ngOnInit(): void {
     

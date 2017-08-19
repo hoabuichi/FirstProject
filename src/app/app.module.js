@@ -26,7 +26,7 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             dashboard_component_1.DashboardComponent,
-            statisticCard_component_1.StatisticCardComponet
+            statisticCard_component_1.StatisticCardComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })
