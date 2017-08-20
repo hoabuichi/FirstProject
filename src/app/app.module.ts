@@ -5,6 +5,7 @@ import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent }  from './app.component';
 import { DashboardComponent }from './dashboard/dashboard.component';
 import { StatisticCardComponent } from './../common/statisticCard/statisticCard.component';
+import { SideBarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { StatisticCardComponent } from './../common/statisticCard/statisticCard.
   declarations: [
     AppComponent,
     DashboardComponent,
-    StatisticCardComponent
+    StatisticCardComponent,
+    SideBarComponent
   ],
   bootstrap: [ AppComponent ]
 })

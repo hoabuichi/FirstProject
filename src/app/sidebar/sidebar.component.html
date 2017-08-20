@@ -1,0 +1,12 @@
+<div *ngFor="let tab of tabs">
+    <div class="custom-tab" (click)="onSelectTab(tab.index)">
+        <span class="icon-tab fa" ngClass="{{tab.icon}}"></span>
+        {{tab.title}}
+        <span *ngIf="tab.submenu" class="fa fa-caret-down"></span>
+    </div>
+    <div *ngIf="tab.submenu && tab.index === selectedTabIndex">
+        <div *ngFor="let subtab of tab.submenu">
+            <div class="custom-sub-tab"><span class="fa fa-angle-double-right"></span>{{subtab.title}}</div>
+        </div>
+    </div>
+</div>

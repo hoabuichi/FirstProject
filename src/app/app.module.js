@@ -12,6 +12,7 @@ var forms_1 = require("@angular/forms"); // <-- NgModel lives here
 var app_component_1 = require("./app.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
 var statisticCard_component_1 = require("./../common/statisticCard/statisticCard.component");
+var sidebar_component_1 = require("./sidebar/sidebar.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -26,7 +27,8 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             dashboard_component_1.DashboardComponent,
-            statisticCard_component_1.StatisticCardComponent
+            statisticCard_component_1.StatisticCardComponent,
+            sidebar_component_1.SideBarComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })
