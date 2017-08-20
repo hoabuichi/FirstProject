@@ -68,13 +68,23 @@ var SideBarComponent = (function () {
     function SideBarComponent() {
         this.tabs = tabs;
         this.selectedTabIndex = 0;
+        this.selectedSubTabIndex = 0;
     }
     SideBarComponent.prototype.onSelectTab = function (tabindex) {
         if (this.selectedTabIndex === tabindex) {
             this.selectedTabIndex = 0;
             return;
         }
+        if (this.selectedTabIndex !== 0) {
+            this.selectedSubTabIndex = 0;
+        }
         this.selectedTabIndex = tabindex;
+    };
+    SideBarComponent.prototype.onSelectSubMenu = function (subTabIndex) {
+        if (this.selectedSubTabIndex === subTabIndex) {
+            return;
+        }
+        this.selectedSubTabIndex = subTabIndex;
     };
     return SideBarComponent;
 }());

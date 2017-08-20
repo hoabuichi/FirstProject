@@ -65,12 +65,23 @@ const tabs = [
 export class SideBarComponent {
     tabs = tabs;
     selectedTabIndex: number = 0;
+    selectedSubTabIndex: number = 0;
 
     onSelectTab(tabindex): void {
         if(this.selectedTabIndex === tabindex) {
             this.selectedTabIndex = 0;
             return;
         }
+        if(this.selectedTabIndex !== 0) {
+            this.selectedSubTabIndex = 0;
+        }
         this.selectedTabIndex = tabindex;
+    }
+
+    onSelectSubMenu(subTabIndex): void {
+        if(this.selectedSubTabIndex === subTabIndex) {
+            return;
+        }
+        this.selectedSubTabIndex = subTabIndex;
     }
 }
