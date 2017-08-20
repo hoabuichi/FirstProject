@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core'
 
 const tabs = [
     {
-        title : 'DashBoard',
+        title : 'i18n.DASHBOARD',
         index: 1,
         icon: 'fa-dashboard'
     },
@@ -67,7 +67,7 @@ export class SideBarComponent {
     selectedTabIndex: number = 0;
     selectedSubTabIndex: number = 0;
 
-    onSelectTab(tabindex): void {
+    onSelectTab(tabindex: number): void {
         if(this.selectedTabIndex === tabindex) {
             this.selectedTabIndex = 0;
             return;
@@ -78,7 +78,7 @@ export class SideBarComponent {
         this.selectedTabIndex = tabindex;
     }
 
-    onSelectSubMenu(subTabIndex): void {
+    onSelectSubMenu(subTabIndex: number): void {
         if(this.selectedSubTabIndex === subTabIndex) {
             return;
         }

@@ -13,6 +13,14 @@ var app_component_1 = require("./app.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
 var statisticCard_component_1 = require("./../common/statisticCard/statisticCard.component");
 var sidebar_component_1 = require("./sidebar/sidebar.component");
+var core_2 = require("@ngx-translate/core");
+var http_loader_1 = require("@ngx-translate/http-loader");
+var http_1 = require("@angular/common/http");
+// AoT requires an exported function for factories
+function HttpLoaderFactory(httpClient) {
+    return new http_loader_1.TranslateHttpLoader(httpClient, "i18n/", ".json");
+}
+exports.HttpLoaderFactory = HttpLoaderFactory;
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,7 +30,15 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            forms_1.FormsModule // <-- import the FormsModule before binding with [(ngModel)]
+            forms_1.FormsModule,
+            http_1.HttpClientModule,
+            core_2.TranslateModule.forRoot({
+                loader: {
+                    provide: core_2.TranslateLoader,
+                    useFactory: HttpLoaderFactory,
+                    deps: [http_1.HttpClient]
+                }
+            })
         ],
         declarations: [
             app_component_1.AppComponent,

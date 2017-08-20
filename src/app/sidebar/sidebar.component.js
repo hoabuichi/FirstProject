@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var tabs = [
     {
-        title: 'DashBoard',
+        title: 'i18n.DASHBOARD',
         index: 1,
         icon: 'fa-dashboard'
     },

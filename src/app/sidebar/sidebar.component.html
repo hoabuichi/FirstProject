@@ -1,7 +1,7 @@
 <div *ngFor="let tab of tabs">
     <div [ngClass]="{'active-custom-tab':tab.index === selectedTabIndex}" class="custom-tab" (click)="onSelectTab(tab.index)">
         <span class="icon-tab fa" ngClass="{{tab.icon}}"></span>
-        {{tab.title}}
+        {{tab.title | translate}}
         <span *ngIf="tab.submenu" class="fa fa-caret-down"></span>
     </div>
     <div [hidden]="!(tab.submenu && tab.index === selectedTabIndex)">
