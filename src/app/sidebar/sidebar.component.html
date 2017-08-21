@@ -1,13 +1,13 @@
 <div *ngFor="let tab of tabs">
-    <div [ngClass]="{'active-custom-tab':tab.index === selectedTabIndex}" class="custom-tab" (click)="onSelectTab(tab.index)">
+    <div routerLink="{{tab.state ? '/' + tab.state : currentState}}" [ngClass]="{'active-custom-tab':tab.index === selectedTabIndex}" class="custom-tab" (click)="onSelectTab(tab.index)">
         <span class="icon-tab fa" ngClass="{{tab.icon}}"></span>
         {{tab.title | translate}}
         <span *ngIf="tab.submenu" class="fa fa-caret-down"></span>
     </div>
     <div [hidden]="!(tab.submenu && tab.index === selectedTabIndex)">
         <div *ngFor="let subtab of tab.submenu">
-            <div class="custom-sub-tab" (click)="onSelectSubMenu(subtab.index)"
-                    [ngClass]="{'active-sub-menu': selectedSubTabIndex === subtab.index}">
+            <div routerLink="/{{subtab.state}}" class="custom-sub-tab" (click)="onSelectSubMenu(subtab.index)"
+                    [ngClass]="{'active-sub-menu': subtab.state === currentState}">
                 <span class="fa fa-angle-double-right"></span>{{subtab.title}}
             </div>
         </div>
