@@ -101,4 +101,18 @@ export class SideBarComponent {
         this.selectedSubTabIndex = subTabIndex;
         this.currentState = submenu[subTabIndex -1].state;
     }
+
+    activeState(tab: Tab) : boolean {
+        if(tab.state === this.currentState) {
+            return true;
+        }
+        if(tab.submenu) {
+            for( let menu in tab.submenu) {
+                if(tab.submenu[menu].state === this.currentState) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

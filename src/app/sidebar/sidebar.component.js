@@ -101,6 +101,19 @@ var SideBarComponent = (function () {
         this.selectedSubTabIndex = subTabIndex;
         this.currentState = submenu[subTabIndex - 1].state;
     };
+    SideBarComponent.prototype.activeState = function (tab) {
+        if (tab.state === this.currentState) {
+            return true;
+        }
+        if (tab.submenu) {
+            for (var menu in tab.submenu) {
+                if (tab.submenu[menu].state === this.currentState) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    };
     return SideBarComponent;
 }());
 SideBarComponent = __decorate([

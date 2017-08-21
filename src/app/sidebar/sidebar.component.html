@@ -1,5 +1,5 @@
 <div *ngFor="let tab of tabs">
-    <div routerLink="{{tab.state ? '/' + tab.state : currentState}}" [ngClass]="{'active-custom-tab':tab.index === selectedTabIndex}" class="custom-tab" (click)="onSelectTab(tab.index)">
+    <div routerLink="{{tab.state ? '/' + tab.state : currentState}}" [ngClass]="{'active-custom-tab':tab.index === selectedTabIndex, 'active-state': activeState(tab)}" class="custom-tab" (click)="onSelectTab(tab.index)">
         <span class="icon-tab fa" ngClass="{{tab.icon}}"></span>
         {{tab.title | translate}}
         <span *ngIf="tab.submenu" class="fa fa-caret-down"></span>
