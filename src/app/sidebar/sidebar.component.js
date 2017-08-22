@@ -102,6 +102,9 @@ var SideBarComponent = (function () {
         this.currentState = submenu[subTabIndex - 1].state;
     };
     SideBarComponent.prototype.activeState = function (tab) {
+        if (tab.index === 1 && this.currentState === undefined) {
+            return true;
+        }
         if (tab.state === this.currentState) {
             return true;
         }

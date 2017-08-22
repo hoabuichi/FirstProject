@@ -14,7 +14,6 @@ var core_2 = require("@ngx-translate/core");
 var AppComponent = (function () {
     function AppComponent(translate) {
         this.translate = translate;
-        this.title = 'Angular 2';
         translate.addLangs(["en", "fr"]);
         translate.setDefaultLang('en');
         var browserLang = translate.getBrowserLang();
@@ -27,7 +26,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>{{title}}</h1>\n  <side-bar></side-bar>\n  <router-outlet></router-outlet>\n  <select #langSelect (change)=\"translate.use(langSelect.value)\">\n     <option *ngFor=\"let lang of translate.getLangs()\" [value]=\"lang\" [selected]=\"lang === translate.currentLang\">{{ lang }}</option>\n  </select>\n  "
+        template: "<div class=\"angular-2-app\">\n      <side-bar class=\"col-lg-3\"></side-bar>\n      <router-outlet class=\"col-lg-9\"></router-outlet>\n      <select #langSelect (change)=\"translate.use(langSelect.value)\" class=\"language-area\">\n         <option *ngFor=\"let lang of translate.getLangs()\" [value]=\"lang\" [selected]=\"lang === translate.currentLang\">{{ lang }}</option>\n      </select>\n  </div>\n\n  "
     }),
     __metadata("design:paramtypes", [core_2.TranslateService])
 ], AppComponent);

@@ -103,6 +103,9 @@ export class SideBarComponent {
     }
 
     activeState(tab: Tab) : boolean {
+        if(tab.index === 1 && this.currentState === undefined) {
+            return true;
+        }
         if(tab.state === this.currentState) {
             return true;
         }

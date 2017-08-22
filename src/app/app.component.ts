@@ -5,16 +5,17 @@ import { SideBarComponent } from './sidebar/sidebar.component';
 import {TranslateService} from '@ngx-translate/core';
 @Component({
   selector: 'my-app',
-  template: `<h1>{{title}}</h1>
-  <side-bar></side-bar>
-  <router-outlet></router-outlet>
-  <select #langSelect (change)="translate.use(langSelect.value)">
-     <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
-  </select>
+  template: `<div class="angular-2-app">
+      <side-bar class="col-lg-3"></side-bar>
+      <router-outlet class="col-lg-9"></router-outlet>
+      <select #langSelect (change)="translate.use(langSelect.value)" class="language-area">
+         <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+  </div>
+
   `
 })
 export class AppComponent implements OnInit {
-  title = 'Angular 2';
 
   constructor(private translate: TranslateService) {
     translate.addLangs(["en", "fr"]);

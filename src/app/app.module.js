@@ -49,6 +49,11 @@ AppModule = __decorate([
             }),
             router_1.RouterModule.forRoot([
                 {
+                    path: '',
+                    redirectTo: '/dashboard',
+                    pathMatch: 'full'
+                },
+                {
                     path: 'dashboard',
                     component: dashboard_component_1.DashboardComponent
                 },

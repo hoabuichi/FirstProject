@@ -38,6 +38,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
     RouterModule.forRoot([
       {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+      },
+      {
         path: 'dashboard',
         component: DashboardComponent
       },

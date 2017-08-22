@@ -40,3 +40,12 @@
 
 .active-state {
   color: wheat !important; }
+
+.app-title {
+  width: 200px;
+  color: white;
+  background-color: #34495E;
+  height: 100px;
+  line-height: 100px;
+  font-size: 30px;
+  text-align: center; }
